@@ -154,7 +154,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Guru</th>
-                        <th>NISN</th>
+                        <th>NIK</th>
                         <th>Gender</th>
                         <th>Mapel</th>
                         <th class="text-center">Aksi</th>
@@ -172,7 +172,7 @@
                             <?php echo $row->nama_guru ?>
                         </td>
                         <td>
-                            <?php echo $row->nisn ?>
+                            <?php echo $row->nik ?>
                         </td>
                         <td>
                             <?php echo $row->gender ?>

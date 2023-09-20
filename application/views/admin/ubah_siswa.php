@@ -157,7 +157,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
 
         <li>
-            <a href="<?php echo base_url('admin') ?>" <span class="ml-3">Dashboard</span>
+            <a href="<?php echo base_url('admin') ?>" <span class="ml-3">Sekolah</span>
             </a>
         </li>
         <li>
@@ -192,7 +192,7 @@
                             value="<?php echo $data_siswa->nama_siswa ?>">
                     </div>
                     <div class="mb-3 col-6">
-                        <label for="nisn" class="form-label">NISN</label>
+                        <label for="nisn" class="form-label">NIK</label>
                         <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Nisn"
                             value="<?php echo $data_siswa->nisn ?>">
                     </div>

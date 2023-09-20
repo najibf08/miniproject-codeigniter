@@ -1,25 +1,19 @@
-<?php  
-defined('BASEPATH') OR exit('No direct script access allowed');  
-  
-class Auth extends CI_Controller {  
-    function __construct(){  
-        parent::__construct();   
-        $this->load->library('form_validation');  
-        $this->load->model('m_model');   
-        $this->load->helper('my_helper');   
-    }   
-  
-      
-    public function register() {  
-        // Tampilkan halaman register  
-  $this->load->view('auth/register');   
-    }  
-      
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed'); 
+ 
+class Auth extends CI_Controller { 
+ 
+    function __construct() 
+    { 
+        parent::__construct(); 
+        $this->load->model('m_model'); 
+  $this->load->database(); 
+    } 
+ 
     public function index()   
     {   
      $this->load->view('auth/login');   
     }   
-  
     public function aksi_login() {  
         $email = $this->input->post('email', true);   
         $password = $this->input->post('password', true);   
@@ -44,44 +38,56 @@ class Auth extends CI_Controller {
         } else {   
         redirect(base_url()."auth");   
         }   
-    }  
-      
-      
-    public function aksi_register() {  
-        // Ambil data dari formulir register  
-        $username = $this->input->post('username');  
-        $email = $this->input->post('email');  
-        $password = $this->input->post('password');  
-        $role = $this->input->post('role');  
-          
-        // Validasi input  
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[admin.username]');  
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[admin.email]');  
-        $this->form_validation->set_rules('password', 'Password', 'required');  
-      
-        // Jika ingin menambahkan validasi untuk role, Anda dapat melakukannya di sini  
-          
-        if ($this->form_validation->run() === FALSE) {  
-            // Jika validasi gagal, tampilkan kembali halaman register dengan pesan kesalahan  
-            $this->load->view('register');  
-        } else {  
-            // Hash password menggunakan MD5 (tidak direkomendasikan)  
-            $hashed_password = md5($password);  
-      
-            // Simpan data pengguna ke dalam database, termasuk kolom role  
-            $data = array(  
-                'username' => $username,  
+    } 
+ 
+    public function register() {  
+        $this->load->view('auth/register');  
+      }  
+       
+      public function aksi_register() {  
+        $email    = $this->input->post('email', true);  
+        $username = $this->input->post('username', true);  
+        $password = $this->input->post('password', true); 
+       
+        // Check if the password length is at least 8 characters 
+        if (strlen($password) < 8) { 
+            // Password is too short, redirect back to registration 
+            redirect(base_url() . "auth/register"); 
+        } 
+       
+        // Hash the password 
+        $hashed_password = md5($password); 
+       
+        $data = [  
+            'email'    => $email,  
+            'username' => $username,  
+            'password' => $hashed_password,  
+            'role'     => 'admin',  
+        ];  
+       
+        $table = 'admin';  
+       
+        $this->db->insert($table, $data);  
+       
+        if ($this->db->affected_rows() > 0) {  
+            // Registration successful  
+            $this->session->set_userdata([  
+                'logged_in' => TRUE,  
                 'email' => $email,  
-                'password' => $hashed_password,  
-                'role' => $role // Kolom role  
-            );  
-      
-            // Gantilah 'admin' dengan nama tabel Anda  
-            $this->db->insert('admin', $data);  
-      
-            // Redirect ke halaman login atau tampilkan pesan sukses  
-            redirect(base_url('auth'));  
+                'username' => $username,  
+                'role' => 'admin'  
+            ]);  
+       
+            redirect(base_url() . "admin");  
+        } else {  
+            // Registration failed  
+            redirect(base_url() . "auth/register");  
         }  
-    }  
-         
+      } 
+       
+ 
+    function logout() { 
+        $this->session->sess_destroy(); 
+        redirect(base_url('auth')); 
+    } 
 }

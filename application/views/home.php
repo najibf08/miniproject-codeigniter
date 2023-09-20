@@ -1,130 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BINUS</title>
-    <link rel="shortcut icon" href="https://binusasmg.sch.id/ppdb/logobinusa.png" type="image/x-icon">
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #000000;
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
-header {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: url('https://cdn1-production-images-kly.akamaized.net/p47eE4RXKG2bi49O-sEE6hzpmAA=/1200x675/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3284063/original/034346100_1604287575-frank-mckenna-4V8JxijgZ_c-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-header:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 90vh;
-    bottom: 0;
-    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
-}
-
-nav,
-.header-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 4rem;
-    position: relative;
-}
-
-.logo span{
-    color: orange;
-}
-
-.logo a {
-    color: #ffff;
-    font-size: 3rem;
-}
-
-.btn-sign-up {
-    padding: 0.8rem 1rem;
-    background: #000000;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 40px;
-    transition: .3s;
-}
-
-.btn-sign-up:hover {
-    background-color: #fff;
-    color: #000000;
-    text-align: center;
-}
-
-.header-title {
-    margin: auto auto;
-    font-size: 4rem;
-    position: relative;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-.today-date {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.today-date span {
-    font-size: 2.5rem;
-}
-
-.social-media {
-    display: flex;
-    list-style: none;
-    width: 100px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-title span{
-    color: orange;
-}
-
-.social-media li a {
-    color: #fff;
-}
-</style>
-<body>
-    
-    <!-- Header -->
-    <header>
-
-            <nav>
-            
-            <a href="./auth" class="btn-sign-up">Login</a>    
-        
-            <a href="./auth/register"
-                            class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
-                            Register
-                        </a>
-        </div>
-    </header>
-
-</body>
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+    .background { 
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRStt2_WK4vXGYoZJ4_eUH7z_hIuVgJUegOgQ&usqp=CAU); 
+        background-size: cover; 
+ 
+    } 
+ 
+    .ddd { 
+        text-align: center; 
+        color: yellow; 
+    } 
+ 
+    .container { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        color: white; 
+    } 
+ 
+    .centered { 
+        text-align: center; 
+    } 
+ 
+    .login-button { 
+        display: inline-block; 
+        padding: 15px 30px; 
+        background-color: #3498db; 
+        /* Warna latar belakang */ 
+        color: #fff; 
+        /* Warna teks */ 
+        border-radius: 10px; 
+        /* Sudut-sudut melengkung */ 
+        text-decoration: none; 
+        text-align: center; 
+        font-size: 10px; 
+        border: none; 
+        cursor: pointer; 
+    } 
+ 
+    .login-butto { 
+        display: inline-block; 
+        padding: 15px 30px; 
+        background-color: #FFA500; 
+        color: #fff; 
+        border-radius: 10px; 
+        text-decoration: none; 
+        text-align: center; 
+        font-size: 10px; 
+        border: none; 
+        cursor: pointer; 
+        width: 100px; 
+    } 
+ 
+    .login-button:hover { 
+        background-color: blue; 
+    } 
+ 
+    .login-butto:hover { 
+        background-color: #FFD700; 
+    } 
+    </style> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+ 
+</head> 
+ 
+<body class="background"> 
+ 
+    <div class="container"> 
+        <div class="centered"> 
+            <h1>Selamat Datang di</h1> 
+            <h3>SMK Bina Nusantara Mranggen</h3> 
+            <center> 
+                <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" width="300px" height="250px"> 
+            </center> 
+            <br> 
+ 
+            <a href="./auth/register" target="_blank" class="login-button">Register</a> 
+            </a> 
+            <a href="./auth" target="_blank" class="login-butto">Login</a> 
+        </div> 
+    </div> 
+ 
+</body> 
+ 
 </html>

@@ -142,7 +142,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
 
         <li>
-            <a href="<?php echo base_url('admin') ?>" <span class="ml-3">Dashboard</span>
+            <a href="<?php echo base_url('admin') ?>" <span class="ml-3">Sekolah</span>
             </a>
         </li>
         <li>
