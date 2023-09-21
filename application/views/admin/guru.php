@@ -10,6 +10,9 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+         body {
+            background-image: url(https://wallpapers.com/images/hd/charming-photo-of-rrq-representation-6tw7kiz566z65jsa.jpg); 
+        }
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -126,7 +129,7 @@
     <div class="sidenav" id="mySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
         <li>
-            <a href="<?php echo base_url('admin') ?>" <span class="ml-3">Dashboard</span>
+            <a href="<?php echo base_url('admin') ?>" <span class="ml-3">Sekolah</span>
             </a>
         </li>
         <li>

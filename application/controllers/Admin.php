@@ -99,9 +99,9 @@ if ($this->session->userdata('logged_in')!=true) {
  {
     $data = [
         'nama_guru' => $this->input->post('nama'),
-        'nisn' => $this->input->post('nisn'),
+        'nik' => $this->input->post('nik'),
         'gender' => $this->input->post('gender'),
-        'id_mapel' => $this->input->post('mapel'),
+        'id_mapel' => $this->input->post('id_mapel'),
     ];
     $this->m_model->tambah_data('guru', $data);
     redirect(base_url('admin/guru'));

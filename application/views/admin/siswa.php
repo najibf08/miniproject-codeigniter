@@ -10,6 +10,9 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            background-image: url(https://nyatanya.com/wp-content/uploads/2021/07/LOGO-TIM-INA-800x833.jpg); 
+        }
     body {
         font-family: Arial, sans-serif;
         margin: 0;

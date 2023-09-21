@@ -7,6 +7,10 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            background-image: url(https://i2.wp.com/c.inilah.com/2022/12/1231_110736_6d18_inilah.com_.jpg?resize=780,470); 
+        }
+
     .card {
         background-color: #20B2AA;
         border: 1px solid #ccc;
@@ -124,13 +128,14 @@
         background-color: white;
     }
     </style>
+
 </head>
 
 <body>
 
     <div class="navbar">
         <span class="openbtn" onclick="openNav()">&#9776;</span>
-        <h3 class="text-center text-white">Dashboard</h3>
+        <h3 class="text-center text-white">Navbar</h3>
         <div class="search-container">
             <input type="text" class="search-box" placeholder="Cari...">
             <button type="submit">Cari</button>
@@ -139,6 +144,9 @@
 
     <!-- Side Navbar (Samping) -->
     <div class="sidenav" id="mySidenav">
+    <center> 
+                <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" width="100px" height="200px"> 
+            </center> 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
 
         <li>
@@ -168,22 +176,18 @@
         <div class="card">
             <p>Jumlah Kelas</p>
             <h2>6 </h2>
-            <a href="" target="_blank" class="login-button">Lihat Detail</a>
         </div>
         <div class="card">
             <p>Jumlah Mapel</p>
             <h2>9</h2>
-            <a href="" target="_blank" class="login-button">Lihat Detail</a>
         </div>
         <div class="card">
             <p>Jumlah Siswa</p>
             <h2>4</h2>
-            <a href="" target="_blank" class="login-button">Lihat Detail</a>
         </div>
         <div class="card">
             <p>Jumlah guru</p>
             <h2>10</h2>
-            <a href="" target="_blank" class="login-button">Lihat Detail</a>
         </div>
 
     </div>
