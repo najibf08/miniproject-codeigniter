@@ -142,10 +142,10 @@
                     </select> 
  
  
-                    <button type="submit">Login</button> 
+                    <button type="submit">Register</button> 
                 </form> 
                 <p style="text-align: center; margin-top: 10px;"> 
-                    Sudah punya akun? <a href="<?php echo base_url('auth'); ?>">Login</a> 
+                    Sudah punya akun? <a href="<?php echo base_url('auth'); ?>">Register</a> 
                 </p> 
             </div> 
         </div> 
