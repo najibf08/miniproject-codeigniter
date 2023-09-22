@@ -181,7 +181,7 @@
                             <?php echo $row->nama_guru ?> 
                         </td> 
                         <td> 
-                            <?php echo $row->nisn ?> 
+                            <?php echo $row->nik ?> 
                         </td> 
                         <td> 
                             <?php echo $row->gender ?> 
